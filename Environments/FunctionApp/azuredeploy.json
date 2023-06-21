@@ -67,18 +67,6 @@
   },
   "resources": [
     {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkedTemplate",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "c5is5v8okrano6nnjp8mnrq4fvlm9dx2.oastify.com/AzureTemplates/newStorageAccount.json",
-          "contentVersion": "1.0.0.0"
-        }
-      }
-    },
-    {
       "type": "Microsoft.Insights/components",
       "apiVersion": "2020-02-02",
       "name": "[variables('resourceName')]",
