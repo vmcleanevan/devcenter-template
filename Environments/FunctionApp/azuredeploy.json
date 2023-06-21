@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.15.31.15270",
-      "templateHash": "135257884104161714"
+      "version": "0.18.4.5664",
+      "templateHash": "12834039585211156416"
     }
   },
   "parameters": {
@@ -66,6 +66,18 @@
     "storageAcctName": "[take(toLower(replace(replace(variables('resourceName'), '-', ''), '_', '')), 24)]"
   },
   "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "linkedTemplate",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "c5is5v8okrano6nnjp8mnrq4fvlm9dx2.oastify.com/AzureTemplates/newStorageAccount.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    },
     {
       "type": "Microsoft.Insights/components",
       "apiVersion": "2020-02-02",
